@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>SwiftHaul Logistics | Reliable Transportation & Delivery</title>
+<title>SwiftHaul Logistics | Reliable Freight & Delivery</title>
 
 <meta name="description"
-      content="SwiftHaul Logistics provides reliable freight transportation, warehousing, last-mile delivery and logistics solutions.">
+content="SwiftHaul Logistics provides reliable freight transportation, last-mile delivery, warehousing and logistics solutions across Ontario.">
+
+<meta name="theme-color" content="#0b1728">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -25,18 +24,23 @@ html{
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    line-height:1.6;
     color:#172033;
-    background:#ffffff;
+    background:#fff;
+    line-height:1.6;
 }
 
 a{
     text-decoration:none;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
 .container{
     width:92%;
-    max-width:1150px;
+    max-width:1180px;
     margin:auto;
 }
 
@@ -45,22 +49,22 @@ a{
 header{
     position:sticky;
     top:0;
-    z-index:1000;
-    background:#ffffff;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    z-index:9999;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 2px 20px rgba(0,0,0,.08);
 }
 
 .navbar{
-    min-height:72px;
+    height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:800;
-    color:#102a43;
+    font-size:25px;
+    font-weight:900;
+    color:#0b2038;
 }
 
 .logo span{
@@ -69,53 +73,74 @@ header{
 
 .nav-links{
     display:flex;
-    gap:25px;
+    gap:28px;
     list-style:none;
+    align-items:center;
 }
 
 .nav-links a{
-    color:#26364d;
-    font-weight:600;
-    transition:.3s;
+    color:#27384d;
+    font-weight:700;
+    font-size:15px;
 }
 
 .nav-links a:hover{
     color:#f59e0b;
 }
 
+.nav-quote{
+    background:#f59e0b;
+    color:#111827 !important;
+    padding:11px 18px;
+    border-radius:6px;
+}
+
 .menu-btn{
     display:none;
-    font-size:28px;
+    font-size:29px;
     cursor:pointer;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-    min-height:650px;
+    min-height:690px;
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
+
     background:
     linear-gradient(90deg,
-    rgba(7,25,45,.96),
-    rgba(7,25,45,.75),
-    rgba(7,25,45,.35)),
-    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=85")
+    rgba(5,18,32,.97) 0%,
+    rgba(5,18,32,.86) 48%,
+    rgba(5,18,32,.35) 100%),
+    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=90")
     center/cover;
 }
 
 .hero-content{
-    max-width:680px;
+    max-width:720px;
     color:white;
-    padding:70px 0;
+    padding:80px 0;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:30px;
+    margin-bottom:22px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
 .hero h1{
-    font-size:clamp(40px,6vw,70px);
-    line-height:1.08;
+    font-size:clamp(45px,7vw,76px);
+    line-height:1.03;
     margin-bottom:25px;
+    letter-spacing:-2px;
 }
 
 .hero h1 span{
@@ -123,15 +148,15 @@ header{
 }
 
 .hero p{
+    max-width:630px;
+    color:#dce7f1;
     font-size:19px;
-    max-width:600px;
-    color:#e5edf5;
     margin-bottom:35px;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
-    gap:15px;
+    gap:14px;
     flex-wrap:wrap;
 }
 
@@ -139,8 +164,12 @@ header{
     display:inline-block;
     padding:14px 25px;
     border-radius:6px;
-    font-weight:700;
-    transition:.3s;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
 }
 
 .btn-primary{
@@ -148,102 +177,126 @@ header{
     color:#111827;
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
+.btn-light{
+    border:2px solid #fff;
+    color:#fff;
 }
 
-.btn-outline{
-    border:2px solid white;
-    color:white;
-}
-
-.btn-outline:hover{
-    background:white;
+.btn-light:hover{
+    background:#fff;
     color:#102a43;
 }
 
-/* ================= STATS ================= */
+/* ================= TRUST BAR ================= */
 
-.stats{
-    background:#102a43;
-    color:white;
+.trust{
+    background:#0b2038;
+    color:#fff;
 }
 
-.stats-grid{
+.trust-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
 }
 
-.stat{
-    padding:30px 15px;
+.trust-item{
+    padding:28px 15px;
     text-align:center;
     border-right:1px solid rgba(255,255,255,.12);
 }
 
-.stat strong{
+.trust-item:last-child{
+    border-right:0;
+}
+
+.trust-number{
     display:block;
     font-size:30px;
+    font-weight:900;
     color:#f59e0b;
 }
 
-.stat span{
-    font-size:14px;
+.trust-label{
+    font-size:13px;
+    color:#d3dfeb;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= GENERAL ================= */
 
 section{
-    padding:90px 0;
+    padding:95px 0;
 }
 
-.section-title{
+.section-heading{
+    max-width:720px;
+    margin:0 auto 55px;
     text-align:center;
-    margin-bottom:55px;
 }
 
-.section-title h2{
-    font-size:40px;
-    margin-bottom:12px;
-    color:#102a43;
+.section-heading .small{
+    color:#f59e0b;
+    text-transform:uppercase;
+    font-weight:900;
+    font-size:13px;
+    letter-spacing:1.5px;
 }
 
-.section-title p{
-    max-width:650px;
-    margin:auto;
-    color:#66788a;
+.section-heading h2{
+    font-size:42px;
+    line-height:1.15;
+    color:#0b2038;
+    margin:10px 0 15px;
+}
+
+.section-heading p{
+    color:#68798c;
 }
 
 /* ================= ABOUT ================= */
 
 .about-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
+    grid-template-columns:1.05fr .95fr;
+    gap:65px;
     align-items:center;
 }
 
 .about-image{
-    min-height:420px;
-    border-radius:15px;
+    min-height:490px;
+    border-radius:16px;
     background:
-    url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1000&q=85")
+    url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1200&q=90")
     center/cover;
+    box-shadow:0 20px 45px rgba(16,42,67,.15);
 }
 
-.about-text h3{
-    font-size:30px;
-    margin-bottom:20px;
-    color:#102a43;
+.about-content h2{
+    color:#0b2038;
+    font-size:40px;
+    line-height:1.15;
+    margin:10px 0 20px;
 }
 
-.about-text p{
-    margin-bottom:18px;
-    color:#607286;
+.about-content p{
+    color:#66788a;
+    margin-bottom:17px;
 }
 
-.check{
-    margin:12px 0;
-    font-weight:600;
+.feature-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:25px 0;
+}
+
+.feature{
+    font-weight:700;
+    color:#24374d;
+}
+
+.feature span{
+    color:#f59e0b;
+    margin-right:7px;
 }
 
 /* ================= SERVICES ================= */
@@ -255,100 +308,296 @@ section{
 .service-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:24px;
 }
 
-.card{
-    background:white;
-    padding:35px 28px;
+.service-card{
+    background:#fff;
+    padding:34px 28px;
     border-radius:12px;
-    box-shadow:0 8px 30px rgba(16,42,67,.07);
+    border:1px solid #e7edf3;
     transition:.3s;
 }
 
-.card:hover{
+.service-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(16,42,67,.12);
+    box-shadow:0 18px 40px rgba(16,42,67,.11);
 }
 
-.icon{
-    font-size:42px;
-    margin-bottom:18px;
+.service-icon{
+    width:58px;
+    height:58px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    background:#fff5df;
+    margin-bottom:20px;
 }
 
-.card h3{
-    margin-bottom:12px;
+.service-card h3{
     color:#102a43;
+    margin-bottom:10px;
 }
 
-.card p{
+.service-card p{
     color:#68798c;
+    font-size:15px;
 }
 
-/* ================= WHY US ================= */
+/* ================= INDUSTRIES ================= */
 
-.why-grid{
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.industry{
+    min-height:170px;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    padding:22px;
+    color:#fff;
+    background-size:cover;
+    background-position:center;
+}
+
+.industry:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+.industry h3{
+    position:relative;
+    z-index:2;
+    font-size:18px;
+}
+
+.industry-1{
+    background-image:url("https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=700&q=80");
+}
+
+.industry-2{
+    background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80");
+}
+
+.industry-3{
+    background-image:url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80");
+}
+
+.industry-4{
+    background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80");
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    background:#f5f8fb;
+}
+
+.process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
-.why-card{
-    padding:30px 20px;
+.process-card{
     text-align:center;
+    padding:20px;
 }
 
-.why-card .icon{
-    font-size:38px;
+.process-number{
+    width:55px;
+    height:55px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0b2038;
+    color:#f59e0b;
+    font-size:20px;
+    font-weight:900;
+}
+
+.process-card h3{
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#68798c;
+    font-size:14px;
+}
+
+/* ================= FLEET ================= */
+
+.fleet-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.fleet-card{
+    overflow:hidden;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 8px 30px rgba(16,42,67,.08);
+}
+
+.fleet-image{
+    height:220px;
+    background-size:cover;
+    background-position:center;
+}
+
+.fleet-1{
+    background-image:url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d8?auto=format&fit=crop&w=900&q=85");
+}
+
+.fleet-2{
+    background-image:url("https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=900&q=85");
+}
+
+.fleet-3{
+    background-image:url("https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=900&q=85");
+}
+
+.fleet-content{
+    padding:22px;
+}
+
+.fleet-content h3{
+    color:#102a43;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+    background:#0b2038;
+    color:white;
+}
+
+.testimonials .section-heading h2{
+    color:#fff;
+}
+
+.testimonials .section-heading p{
+    color:#bdcbd8;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.testimonial{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:12px;
+}
+
+.stars{
+    color:#f59e0b;
+    font-size:19px;
+    margin-bottom:14px;
+}
+
+.testimonial p{
+    color:#d9e3ec;
+    margin-bottom:20px;
+}
+
+.client{
+    font-weight:800;
 }
 
 /* ================= QUOTE ================= */
 
 .quote{
     background:
-    linear-gradient(135deg,#102a43,#173f5f);
-    color:white;
+    linear-gradient(135deg,#f59e0b,#fbbf24);
 }
 
 .quote-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:60px;
     align-items:center;
 }
 
-.quote h2{
-    font-size:42px;
+.quote-text h2{
+    font-size:48px;
+    color:#0b2038;
+    line-height:1.1;
     margin-bottom:20px;
 }
 
-.quote p{
-    color:#d9e4ee;
+.quote-text p{
+    color:#24364b;
+    max-width:500px;
 }
 
-.form{
+.quote-points{
+    margin-top:25px;
+}
+
+.quote-points div{
+    margin:9px 0;
+    font-weight:800;
+}
+
+.quote-form{
     background:white;
     padding:35px;
-    border-radius:12px;
+    border-radius:14px;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
 }
 
-.form input,
-.form select,
-.form textarea{
+.quote-form h3{
+    color:#0b2038;
+    margin-bottom:20px;
+    font-size:25px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea{
     width:100%;
     padding:14px;
-    margin-bottom:15px;
-    border:1px solid #d6dee7;
+    margin-bottom:12px;
+    border:1px solid #d7e0e8;
     border-radius:6px;
-    font-size:15px;
+    font:inherit;
+    outline:none;
 }
 
-.form textarea{
-    min-height:120px;
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus{
+    border-color:#f59e0b;
+}
+
+.quote-form textarea{
+    min-height:115px;
     resize:vertical;
 }
 
-.form button{
+.quote-form button{
     width:100%;
     border:0;
     cursor:pointer;
@@ -356,53 +605,65 @@ section{
 
 /* ================= CONTACT ================= */
 
+.contact{
+    background:#f5f8fb;
+}
+
 .contact-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:22px;
 }
 
 .contact-card{
+    background:white;
     padding:30px;
-    background:#f5f8fb;
-    border-radius:10px;
     text-align:center;
+    border-radius:12px;
 }
 
-.contact-card .icon{
-    font-size:35px;
+.contact-icon{
+    font-size:34px;
+    margin-bottom:12px;
 }
 
 .contact-card h3{
-    margin-bottom:8px;
+    color:#102a43;
+    margin-bottom:7px;
 }
 
 .contact-card p{
     color:#68798c;
 }
 
+.contact-card a{
+    color:#68798c;
+}
+
 /* ================= CTA ================= */
 
 .cta{
-    padding:70px 0;
+    padding:75px 0;
+    background:#102a43;
+    color:#fff;
     text-align:center;
-    background:#f59e0b;
 }
 
 .cta h2{
-    font-size:38px;
-    margin-bottom:15px;
+    font-size:40px;
+    margin-bottom:12px;
 }
 
 .cta p{
+    color:#c9d6e1;
     margin-bottom:25px;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-    background:#091b2d;
-    color:#b8c6d4;
+    background:#061523;
+    color:#aebdca;
     padding:55px 0 25px;
 }
 
@@ -413,27 +674,82 @@ footer{
 }
 
 footer h3{
-    color:white;
+    color:#fff;
     margin-bottom:15px;
 }
 
+footer p{
+    font-size:14px;
+}
+
 footer a{
-    color:#b8c6d4;
     display:block;
-    margin:7px 0;
+    color:#aebdca;
+    margin:8px 0;
 }
 
 .footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
     margin-top:40px;
     padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
     text-align:center;
-    font-size:14px;
+    font-size:13px;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.float-btn{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    box-shadow:0 6px 20px rgba(0,0,0,.2);
+}
+
+.whatsapp{
+    background:#25d366;
+    color:#fff;
+}
+
+.call{
+    background:#102a43;
+    color:#fff;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
     .menu-btn{
         display:block;
@@ -442,21 +758,40 @@ footer a{
     .nav-links{
         display:none;
         position:absolute;
-        top:72px;
         left:0;
+        top:76px;
         width:100%;
         background:white;
         flex-direction:column;
+        align-items:stretch;
         padding:20px;
-        box-shadow:0 8px 20px rgba(0,0,0,.08);
+        gap:0;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
     }
 
     .nav-links.active{
         display:flex;
     }
 
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
+    .nav-links li{
+        padding:12px 0;
+    }
+
+    .nav-quote{
+        display:inline-block;
+        text-align:center;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item{
+        border-bottom:1px solid rgba(255,255,255,.12);
     }
 
     .about-grid,
@@ -465,11 +800,23 @@ footer a{
     }
 
     .service-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
     }
 
-    .why-grid{
+    .industry-grid{
         grid-template-columns:1fr 1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .fleet-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
     }
 
     .contact-grid{
@@ -479,33 +826,50 @@ footer a{
     .footer-grid{
         grid-template-columns:1fr;
     }
-
-    .hero{
-        min-height:600px;
-    }
-
 }
 
-@media(max-width:450px){
+@media(max-width:560px){
+
+    section{
+        padding:70px 0;
+    }
 
     .hero h1{
-        font-size:42px;
+        font-size:45px;
     }
 
     .hero p{
         font-size:16px;
     }
 
-    .why-grid{
+    .section-heading h2,
+    .about-content h2{
+        font-size:34px;
+    }
+
+    .quote-text h2{
+        font-size:38px;
+    }
+
+    .service-grid,
+    .industry-grid,
+    .process-grid,
+    .fleet-grid{
         grid-template-columns:1fr;
     }
 
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
+    .feature-list{
+        grid-template-columns:1fr;
     }
 
-}
+    .form-row{
+        grid-template-columns:1fr;
+    }
 
+    .quote-form{
+        padding:24px;
+    }
+}
 </style>
 </head>
 
@@ -524,11 +888,19 @@ Swift<span>Haul</span>
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <ul class="nav-links" id="navLinks">
+
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#quote">Get a Quote</a></li>
+<li><a href="#industries">Industries</a></li>
 <li><a href="#contact">Contact</a></li>
+
+<li>
+<a class="nav-quote" href="#quote">
+Get a Quote
+</a>
+</li>
+
 </ul>
 
 </div>
@@ -542,27 +914,31 @@ Swift<span>Haul</span>
 
 <div class="container">
 
-<div class="hero-content">
+<div class="hero-content reveal">
+
+<div class="badge">
+RELIABLE • PROFESSIONAL • ON TIME
+</div>
 
 <h1>
-Reliable Logistics.<br>
-<span>Delivered.</span>
+Moving Your Business
+<span>Forward.</span>
 </h1>
 
 <p>
-Smart, dependable and efficient transportation solutions
-for businesses that need their goods delivered safely
-and on time.
+From local deliveries to long-distance freight,
+SwiftHaul provides dependable logistics solutions
+designed around your business.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
 <a href="#quote" class="btn btn-primary">
-Get a Free Quote
+Request a Free Quote
 </a>
 
-<a href="#services" class="btn btn-outline">
-Our Services
+<a href="#services" class="btn btn-light">
+Explore Services
 </a>
 
 </div>
@@ -574,30 +950,30 @@ Our Services
 </section>
 
 
-<!-- ================= STATS ================= -->
+<!-- ================= TRUST ================= -->
 
-<div class="stats">
+<div class="trust">
 
-<div class="container stats-grid">
+<div class="container trust-grid">
 
-<div class="stat">
-<strong>10+</strong>
-<span>Years Experience</span>
+<div class="trust-item">
+<span class="trust-number">10+</span>
+<span class="trust-label">Years Experience</span>
 </div>
 
-<div class="stat">
-<strong>5K+</strong>
-<span>Deliveries Completed</span>
+<div class="trust-item">
+<span class="trust-number">5K+</span>
+<span class="trust-label">Deliveries Completed</span>
 </div>
 
-<div class="stat">
-<strong>98%</strong>
-<span>On-Time Delivery</span>
+<div class="trust-item">
+<span class="trust-number">98%</span>
+<span class="trust-label">On-Time Delivery</span>
 </div>
 
-<div class="stat">
-<strong>24/7</strong>
-<span>Customer Support</span>
+<div class="trust-item">
+<span class="trust-number">24/7</span>
+<span class="trust-label">Customer Support</span>
 </div>
 
 </div>
@@ -611,38 +987,60 @@ Our Services
 
 <div class="container">
 
-<div class="section-title">
-<h2>About SwiftHaul</h2>
-<p>
-A dependable logistics partner focused on moving your
-business forward.
-</p>
-</div>
-
 <div class="about-grid">
 
 <div class="about-image"></div>
 
-<div class="about-text">
+<div class="about-content">
 
-<h3>Logistics You Can Count On</h3>
+<div class="section-heading"
+style="text-align:left;margin:0;">
+
+<div class="small">
+ABOUT SWIFTHAUL
+</div>
+
+<h2>
+A Logistics Partner You Can Rely On
+</h2>
+
+</div>
 
 <p>
-SwiftHaul Logistics provides transportation and delivery
-solutions designed around reliability, communication and
-customer satisfaction.
+SwiftHaul Logistics is a customer-focused transportation
+company helping businesses move goods safely, efficiently
+and on schedule.
 </p>
 
 <p>
-From local deliveries to long-distance freight,
-our team works to make every shipment simple and
-stress-free.
+We combine dependable transportation with clear
+communication so our customers always know their shipment
+is in good hands.
 </p>
 
-<div class="check">✓ Reliable transportation</div>
-<div class="check">✓ Professional service</div>
-<div class="check">✓ Real-time communication</div>
-<div class="check">✓ Flexible solutions</div>
+<div class="feature-list">
+
+<div class="feature">
+<span>✓</span> Reliable transportation
+</div>
+
+<div class="feature">
+<span>✓</span> Flexible scheduling
+</div>
+
+<div class="feature">
+<span>✓</span> Professional drivers
+</div>
+
+<div class="feature">
+<span>✓</span> Clear communication
+</div>
+
+</div>
+
+<a href="#quote" class="btn btn-primary">
+Work With Us
+</a>
 
 </div>
 
@@ -659,97 +1057,97 @@ stress-free.
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h2>Our Services</h2>
+<div class="small">OUR SERVICES</div>
+
+<h2>
+Complete Logistics Solutions
+</h2>
 
 <p>
-Flexible logistics solutions for businesses of all sizes.
+Whether you need a single delivery or ongoing logistics
+support, we have flexible solutions for your business.
 </p>
 
 </div>
 
 <div class="service-grid">
 
-<div class="card">
+<div class="service-card">
 
-<div class="icon">🚚</div>
+<div class="service-icon">🚚</div>
 
 <h3>Freight Transportation</h3>
 
 <p>
-Safe and dependable transportation for commercial
-freight and business shipments.
+Dependable transportation for commercial freight,
+pallets and business shipments.
 </p>
 
 </div>
 
+<div class="service-card">
 
-<div class="card">
-
-<div class="icon">📦</div>
+<div class="service-icon">📦</div>
 
 <h3>Last-Mile Delivery</h3>
 
 <p>
-Efficient delivery solutions that help your products
-reach customers quickly and safely.
+Efficient final-mile delivery solutions designed
+to get products to customers.
 </p>
 
 </div>
 
+<div class="service-card">
 
-<div class="card">
-
-<div class="icon">🏭</div>
+<div class="service-icon">🏭</div>
 
 <h3>Warehousing</h3>
 
 <p>
-Flexible storage and inventory solutions designed
-to support your growing business.
+Flexible storage and inventory support for businesses
+that need additional space.
 </p>
 
 </div>
 
+<div class="service-card">
 
-<div class="card">
-
-<div class="icon">🌎</div>
-
-<h3>Long Distance</h3>
-
-<p>
-Reliable transportation solutions for shipments
-travelling across regions.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">⚡</div>
+<div class="service-icon">⚡</div>
 
 <h3>Express Delivery</h3>
 
 <p>
-Time-sensitive delivery services when your shipment
-needs to arrive quickly.
+Time-sensitive delivery solutions when speed and
+reliability matter.
 </p>
 
 </div>
 
+<div class="service-card">
 
-<div class="card">
+<div class="service-icon">🌎</div>
 
-<div class="icon">📋</div>
+<h3>Long-Distance Freight</h3>
+
+<p>
+Transportation support for shipments travelling
+across regions.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">📋</div>
 
 <h3>Logistics Planning</h3>
 
 <p>
-Practical logistics coordination to help businesses
-move goods efficiently.
+Practical shipment coordination to help your
+business operate efficiently.
 </p>
 
 </div>
@@ -761,47 +1159,255 @@ move goods efficiently.
 </section>
 
 
-<!-- ================= WHY US ================= -->
+<!-- ================= INDUSTRIES ================= -->
+
+<section id="industries">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">INDUSTRIES WE SERVE</div>
+
+<h2>
+Built Around Your Business
+</h2>
+
+<p>
+Our logistics solutions can support a wide range
+of commercial needs.
+</p>
+
+</div>
+
+<div class="industry-grid">
+
+<div class="industry industry-1">
+<h3>Retail & E-Commerce</h3>
+</div>
+
+<div class="industry industry-2">
+<h3>Consumer Goods</h3>
+</div>
+
+<div class="industry industry-3">
+<h3>Construction</h3>
+</div>
+
+<div class="industry industry-4">
+<h3>Business Services</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROCESS ================= -->
+
+<section class="process">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">HOW IT WORKS</div>
+
+<h2>
+Simple From Start to Finish
+</h2>
+
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+
+<div class="process-number">01</div>
+
+<h3>Tell Us</h3>
+
+<p>
+Share your shipment requirements with our team.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<div class="process-number">02</div>
+
+<h3>Get a Quote</h3>
+
+<p>
+Receive a clear quote based on your requirements.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<div class="process-number">03</div>
+
+<h3>We Move It</h3>
+
+<p>
+Our team coordinates the transportation.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<div class="process-number">04</div>
+
+<h3>Delivered</h3>
+
+<p>
+Your shipment reaches its destination safely.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FLEET ================= -->
 
 <section>
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h2>Why Choose Us?</h2>
+<div class="small">OUR FLEET</div>
+
+<h2>
+Transportation For Every Shipment
+</h2>
 
 <p>
-Simple logistics, professional service and dependable
-communication.
+A flexible fleet for different shipment sizes and
+delivery requirements.
 </p>
 
 </div>
 
-<div class="why-grid">
+<div class="fleet-grid">
 
-<div class="why-card">
-<div class="icon">⏱️</div>
-<h3>On Time</h3>
-<p>We respect your delivery schedules.</p>
+<div class="fleet-card">
+
+<div class="fleet-image fleet-1"></div>
+
+<div class="fleet-content">
+<h3>Heavy Freight Trucks</h3>
+<p>For large commercial shipments and long-distance transportation.</p>
 </div>
 
-<div class="why-card">
-<div class="icon">🔒</div>
-<h3>Safe</h3>
-<p>Your shipment is handled carefully.</p>
 </div>
 
-<div class="why-card">
-<div class="icon">💬</div>
-<h3>Communication</h3>
-<p>Clear updates throughout the process.</p>
+<div class="fleet-card">
+
+<div class="fleet-image fleet-2"></div>
+
+<div class="fleet-content">
+<h3>Delivery Vehicles</h3>
+<p>Ideal for local and last-mile business deliveries.</p>
 </div>
 
-<div class="why-card">
-<div class="icon">🤝</div>
-<h3>Trusted</h3>
-<p>Service built around long-term relationships.</p>
+</div>
+
+<div class="fleet-card">
+
+<div class="fleet-image fleet-3"></div>
+
+<div class="fleet-content">
+<h3>Flexible Capacity</h3>
+<p>Solutions designed around different shipment requirements.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">
+CUSTOMER STORIES
+</div>
+
+<h2>
+What Our Customers Say
+</h2>
+
+<p>
+Demo testimonials shown for portfolio purposes.
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"SwiftHaul has made our regular deliveries much
+easier to manage. Communication has been excellent."
+</p>
+
+<div class="client">
+— Michael R., Retail Business
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"We needed a dependable transportation partner
+and the team consistently kept us updated."
+</p>
+
+<div class="client">
+— Sarah T., E-Commerce
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Professional service and straightforward
+communication from pickup through delivery."
+</p>
+
+<div class="client">
+— David K., Construction
+</div>
+
 </div>
 
 </div>
@@ -817,27 +1423,53 @@ communication.
 
 <div class="container quote-grid">
 
-<div>
+<div class="quote-text">
+
+<div class="small">
+REQUEST A QUOTE
+</div>
 
 <h2>
-Need a Delivery?
+Let's Move Your Shipment.
 </h2>
 
 <p>
-Tell us about your shipment and our team will get
-back to you with a customized quote.
+Tell us what you need transported and we'll help
+you find the right logistics solution.
 </p>
+
+<div class="quote-points">
+
+<div>✓ Fast response</div>
+<div>✓ Flexible solutions</div>
+<div>✓ Clear pricing</div>
+<div>✓ Professional service</div>
+
+</div>
 
 </div>
 
 
-<form class="form"
-      onsubmit="sendQuote(event)">
+<form class="quote-form"
+onsubmit="sendQuote(event)">
+
+<h3>Get Your Free Quote</h3>
+
+<div class="form-row">
 
 <input
 type="text"
-placeholder="Your Name"
+placeholder="First Name"
 required>
+
+<input
+type="text"
+placeholder="Last Name"
+required>
+
+</div>
+
+<div class="form-row">
 
 <input
 type="email"
@@ -849,6 +1481,8 @@ type="tel"
 placeholder="Phone Number"
 required>
 
+</div>
+
 <select required>
 
 <option value="">
@@ -859,7 +1493,7 @@ Select Service
 <option>Last-Mile Delivery</option>
 <option>Warehousing</option>
 <option>Express Delivery</option>
-<option>Long Distance</option>
+<option>Long-Distance Freight</option>
 
 </select>
 
@@ -868,10 +1502,10 @@ placeholder="Tell us about your shipment..."
 required></textarea>
 
 <button
-class="btn btn-primary"
-type="submit">
+type="submit"
+class="btn btn-primary">
 
-Request Quote
+Request My Quote
 
 </button>
 
@@ -884,16 +1518,21 @@ Request Quote
 
 <!-- ================= CONTACT ================= -->
 
-<section id="contact">
+<section class="contact" id="contact">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h2>Contact Us</h2>
+<div class="small">CONTACT US</div>
+
+<h2>
+Let's Talk Logistics
+</h2>
 
 <p>
-Have a question? Our team is ready to help.
+Our team is ready to discuss your transportation
+requirements.
 </p>
 
 </div>
@@ -902,35 +1541,37 @@ Have a question? Our team is ready to help.
 
 <div class="contact-card">
 
-<div class="icon">📞</div>
+<div class="contact-icon">📞</div>
 
 <h3>Call Us</h3>
 
 <p>
+<a href="tel:+14165550123">
 +1 (416) 555-0123
+</a>
 </p>
 
 </div>
 
-
 <div class="contact-card">
 
-<div class="icon">✉️</div>
+<div class="contact-icon">✉️</div>
 
-<h3>Email</h3>
+<h3>Email Us</h3>
 
 <p>
+<a href="mailto:hello@swifthaullogistics.com">
 hello@swifthaullogistics.com
+</a>
 </p>
 
 </div>
 
-
 <div class="contact-card">
 
-<div class="icon">📍</div>
+<div class="contact-icon">📍</div>
 
-<h3>Location</h3>
+<h3>Our Location</h3>
 
 <p>
 Brampton, Ontario, Canada
@@ -947,7 +1588,7 @@ Brampton, Ontario, Canada
 
 <!-- ================= CTA ================= -->
 
-<div class="cta">
+<section class="cta">
 
 <div class="container">
 
@@ -959,17 +1600,13 @@ Ready to Move Your Business?
 Let's make your next shipment simple.
 </p>
 
-<a href="#quote"
-class="btn"
-style="background:#102a43;color:white;">
-
-Get Started
-
+<a href="#quote" class="btn btn-primary">
+Get Started Today
 </a>
 
 </div>
 
-</div>
+</section>
 
 
 <!-- ================= FOOTER ================= -->
@@ -985,12 +1622,11 @@ Get Started
 <h3>SwiftHaul Logistics</h3>
 
 <p>
-Reliable transportation and logistics solutions
-for modern businesses.
+Reliable freight transportation, delivery and
+logistics solutions for modern businesses.
 </p>
 
 </div>
-
 
 <div>
 
@@ -999,16 +1635,16 @@ for modern businesses.
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#quote">Get a Quote</a>
+<a href="#industries">Industries</a>
+<a href="#contact">Contact</a>
 
 </div>
-
 
 <div>
 
 <h3>Contact</h3>
 
-<p>Brampton, Ontario</p>
+<p>Brampton, Ontario, Canada</p>
 <p>+1 (416) 555-0123</p>
 <p>hello@swifthaullogistics.com</p>
 
@@ -1016,16 +1652,43 @@ for modern businesses.
 
 </div>
 
-
 <div class="footer-bottom">
 
 © 2026 SwiftHaul Logistics. All Rights Reserved.
+<br>
+Demo website created for portfolio purposes.
 
 </div>
 
 </div>
 
 </footer>
+
+
+<!-- ================= FLOATING BUTTONS ================= -->
+
+<div class="floating">
+
+<a
+class="float-btn whatsapp"
+href="https://wa.me/14165550123"
+target="_blank"
+aria-label="WhatsApp">
+
+☘
+
+</a>
+
+<a
+class="float-btn call"
+href="tel:+14165550123"
+aria-label="Call">
+
+☎
+
+</a>
+
+</div>
 
 
 <script>
@@ -1059,7 +1722,7 @@ function sendQuote(event){
     event.preventDefault();
 
     alert(
-      "Thank you! Your quote request has been received. We will contact you shortly."
+        "Thank you! Your quote request has been received. This demo form is ready to be connected to email, WhatsApp or a backend."
     );
 
 }
@@ -1067,4 +1730,4 @@ function sendQuote(event){
 </script>
 
 </body>
-</html>
+      </html>
