@@ -1450,64 +1450,109 @@ you find the right logistics solution.
 </div>
 
 
-<form class="quote-form"
-onsubmit="sendQuote(event)">
+<form
+    class="quote-form"
+    action="https://formsubmit.co/YOUR_EMAIL_HERE"
+    method="POST">
 
-<h3>Get Your Free Quote</h3>
+    <input
+        type="hidden"
+        name="_subject"
+        value="New SwiftHaul Quote Request">
 
-<div class="form-row">
+    <input
+        type="hidden"
+        name="_template"
+        value="table">
 
-<input
-type="text"
-placeholder="First Name"
-required>
+    <input
+        type="hidden"
+        name="_captcha"
+        value="true">
 
-<input
-type="text"
-placeholder="Last Name"
-required>
+    <input
+        type="hidden"
+        name="_url"
+        value="https://mahatodeepak.github.io/logistics-demo/">
 
-</div>
+    <h3>Get Your Free Quote</h3>
 
-<div class="form-row">
+    <div class="form-row">
 
-<input
-type="email"
-placeholder="Email Address"
-required>
+        <input
+            type="text"
+            name="first_name"
+            placeholder="First Name"
+            required>
 
-<input
-type="tel"
-placeholder="Phone Number"
-required>
+        <input
+            type="text"
+            name="last_name"
+            placeholder="Last Name"
+            required>
 
-</div>
+    </div>
 
-<select required>
+    <div class="form-row">
 
-<option value="">
-Select Service
-</option>
+        <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required>
 
-<option>Freight Transportation</option>
-<option>Last-Mile Delivery</option>
-<option>Warehousing</option>
-<option>Express Delivery</option>
-<option>Long-Distance Freight</option>
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required>
 
-</select>
+    </div>
 
-<textarea
-placeholder="Tell us about your shipment..."
-required></textarea>
+    <select name="service" required>
 
-<button
-type="submit"
-class="btn btn-primary">
+        <option value="">
+            Select Service
+        </option>
 
-Request My Quote
+        <option value="Freight Transportation">
+            Freight Transportation
+        </option>
 
-</button>
+        <option value="Last-Mile Delivery">
+            Last-Mile Delivery
+        </option>
+
+        <option value="Warehousing">
+            Warehousing
+        </option>
+
+        <option value="Express Delivery">
+            Express Delivery
+        </option>
+
+        <option value="Long-Distance Freight">
+            Long-Distance Freight
+        </option>
+
+        <option value="Logistics Planning">
+            Logistics Planning
+        </option>
+
+    </select>
+
+    <textarea
+        name="message"
+        placeholder="Tell us about your shipment..."
+        required></textarea>
+
+    <button
+        type="submit"
+        class="btn btn-primary">
+
+        Request My Quote
+
+    </button>
 
 </form>
 
@@ -1717,15 +1762,7 @@ document
 });
 
 
-function sendQuote(event){
 
-    event.preventDefault();
-
-    alert(
-        "Thank you! Your quote request has been received. This demo form is ready to be connected to email, WhatsApp or a backend."
-    );
-
-}
 
 </script>
 
